@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2caee6, #0454a3);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+main { width: 100%; }
+.container { background: #fff; width: 100%; max-width: 850px; padding: 40px; border-radius: 18px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.10); box-sizing: border-box; margin: 0 auto; }
+h1, h2 { margin-top: 0; margin-bottom: 15px; }
+h3 { margin-top: 0; }
+p { line-height: 1.6; }
+.form-group { text-align: left; margin-bottom: 20px; }
+
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+
+input { width: 100%; padding: 13px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 7px; font-size: 16px; outline: none; }
+
+input:focus { border-color: #007bff; }
+
+button { padding: 13px 22px; border: none; border-radius: 7px; cursor: pointer; background-color: #007bff; color: #fff; font-size: 16px; font-weight: bold; transition: background-color .2s, transform .1s; }
+
+button:hover { background-color: #0056b3; }
+
+button:active { transform: scale(.98); }
+
+button:disabled { background-color: #999; cursor: not-allowed; transform: none; }
+
+#errorMessage, .error-message { color: #d00000; font-weight: bold; margin-top: 10px; min-height: 1.2em; }
+
+.hidden { display: none; }
+
+.reading-box { text-align: left; padding: 22px; margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; background: #f8f8f8; line-height: 1.7; }
+
+.instruction-intro { margin-bottom: 25px; }
+
+.assessment-list { text-align: left; max-width: 650px; margin: 0 auto 25px; padding-left: 25px; }
+
+.assessment-list li { margin-bottom: 10px; line-height: 1.5; }
+
+.refresh-warning { text-align: left; background: #fff8e1; border-left: 4px solid #f0b400; border-radius: 8px; padding: 18px; margin: 25px 0; }
+
+.refresh-warning strong { display: block; margin-bottom: 10px; }
+
+.refresh-warning p { margin: 8px 0; }
+
+.progress-container { width: 100%; margin-bottom: 25px; }
+
+.progress-text { text-align: left; font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+
+.progress-bar { width: 100%; height: 8px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }
+
+.progress-fill { height: 100%; background: #007bff; border-radius: 10px; transition: width .3s ease; }
+
+.answer-options { display: grid; gap: 12px; margin-top: 20px; }
+
+.answer-option { display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #ccc; border-radius: 7px; background: #fff; cursor: pointer; }
+
+.answer-option:has(input:checked) { border-color: #007bff; background: #eef7ff; }
+
+.answer-option input { width: auto; margin-top: 4px; }
+
+.button-row { display: flex; justify-content: space-between; gap: 12px; }
+
+.notice-modal { position: fixed; inset: 0; display: flex; justify-content: center; align-items: center; background: rgba(0,0,0,.55); z-index: 20000; padding: 20px; box-sizing: border-box; }
+
+.notice-modal.hidden { display: none; }
+
+.notice-box { width: 100%; max-width: 420px; background: #fff; padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,.25); box-sizing: border-box; }
+
+.notice-box h2 { color: #007bff; }
+
+.powered-by { margin-top: 30px; margin-bottom: 0; font-size: 13px; color: #888; font-weight: 500; }
+
+@media (max-width: 600px) { body { padding: 12px; } .container { margin-top: 20px; padding: 25px 20px; border-radius: 10px; } h1 { font-size: 26px; } h2 { font-size: 22px; } button { width: 100%; } .button-row { flex-direction: column-reverse; } .reading-box { padding: 18px; font-size: 15px; } }
+
+.timer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef7ff;
+  border: 1px solid #b9ddf7;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.timer-container strong {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.timer-container.warning {
+  background: #fff8e1;
+  border-color: #f0b400;
+}
+
+.timer-container.warning strong {
+  color: #d88a00;
+}
+
+.timer-container.danger {
+  background: #ffecec;
+  border-color: #d00000;
+}
+
+.timer-container.danger strong {
+  color: #d00000;
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sales Assessment</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <!-- =====================================================
+         LOGIN SECTION
+         ===================================================== -->
+
+    <section id="loginSection" class="container">
+
+      <h1>Sales Assessment</h1>
+
+      <p>
+        Please complete the assessment below.
+        Your answers will be reviewed after submission.
+      </p>
+
+      <div class="form-group">
+
+        <label for="emailInput">
+          Email
+        </label>
+
+        <input
+          id="emailInput"
+          type="email"
+          placeholder="Enter your email"
+          autocomplete="email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="nameInput">
+          Full Name
+        </label>
+
+        <input
+          id="nameInput"
+          type="text"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          required
+        >
+
+      </div>
+
+
+      <p
+        id="errorMessage"
+        class="error-message"
+        aria-live="polite"
+      ></p>
+
+
+      <button
+        type="button"
+        id="startButton"
+      >
+        Next
+      </button>
+
+
+      <p class="powered-by">
+        Powered by DIPH IT Department
+      </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         INSTRUCTIONS SECTION
+         ===================================================== -->
+
+    <section
+      id="instructionsSection"
+      class="container hidden"
+    >
+
+      <h1>Assessment Instructions</h1>
+
+      <p id="welcomeMessage"></p>
+
+      <hr>
+
+
+      <h2>Instructions</h2>
+
+      <p class="instruction-intro">
+        <strong>
+          Please answer every question before submitting.
+        </strong>
+      </p>
+
+
+      <ul class="assessment-list">
+
+        <li>
+          Read each question carefully.
+        </li>
+
+        <li>
+          Select the answer that best represents your response.
+        </li>
+
+        <li>
+          You may use the Previous button to review
+          an earlier answer.
+        </li>
+
+        <li>
+          Make sure all questions are answered before
+          submitting the assessment.
+        </li>
+
+      </ul>
+
+      </div>
+
+
+      <div class="refresh-warning">
+
+        <strong>
+          ⚠️ Important Notice
+        </strong>
+
+        <p>
+          Do not refresh, close, or navigate away from
+          this page while completing the assessment.
+        </p>
+
+        <p>
+          Doing so may reset your progress.
+        </p>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="beginButton"
+      >
+        Begin Assessment
+      </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUESTION SECTION
+         ===================================================== -->
+
+    <section
+      id="questionSection"
+      class="container hidden"
+    >
+    <div id="timerContainer" class="timer-container">
+       <span>Time Remaining:</span>
+         <strong id="timer">20:00</strong>
+          </div>
+
+      <!-- Progress -->
+
+      <div class="progress-container">
+
+        <div
+          id="progressText"
+          class="progress-text"
+        >
+          Question 1 of 18
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            id="progressFill"
+            class="progress-fill"
+          ></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Section Title -->
+
+      <p
+        id="sectionLabel"
+        class="section-label"
+      >
+        Section 1
+      </p>
+
+
+      <!-- Question Title -->
+
+      <h1 id="questionTitle">
+        Basic Objection Handling
+      </h1>
+
+
+      <!-- Question -->
+
+      <div class="reading-box">
+
+        <p id="questionText"></p>
+
+        <div
+          id="answerOptions"
+          class="answer-options"
+        ></div>
+
+      </div>
+
+
+      <!-- Error -->
+
+      <p
+        id="questionError"
+        class="error-message"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- Navigation -->
+
+      <div class="button-row">
+
+        <button
+          type="button"
+          id="previousButton"
+        >
+          Previous
+        </button>
+
+        <button
+          type="button"
+          id="nextButton"
+        >
+          Next
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         THANK YOU SECTION
+         ===================================================== -->
+
+    <section
+      id="thankYouSection"
+      class="container hidden"
+    >
+
+      <h1>
+        Assessment Completed! 🎉
+      </h1>
+
+      <p id="thankYouMessage"></p>
+
+      <p>
+        Your assessment has been completed.
+        Please wait for further instructions.
+      </p>
+
+      <p class="powered-by">
+        Powered by DIPH IT Department
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       NOTICE MODAL
+       ======================================================= -->
+
+  <div
+    id="noticeModal"
+    class="notice-modal hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="noticeTitle"
+  >
+
+    <div class="notice-box">
+
+      <h2 id="noticeTitle">
+        ⚠️ Notice
+      </h2>
+
+      <p id="noticeMessage"></p>
+
+      <button
+        type="button"
+        id="closeNoticeButton"
+      >
+        OK
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
